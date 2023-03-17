@@ -7,4 +7,4 @@ En este mini proyecto utilice mis conocimientos de MVC(Modelo-vista-controlador)
 Utilice esta api para traer toda la informacion de los personajes:
 :star_struck: https://hp-api.onrender.com/ :star_struck:
 
-
+![](HarryPotterWeb.gif)
