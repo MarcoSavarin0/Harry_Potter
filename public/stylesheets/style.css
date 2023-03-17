@@ -1,0 +1,136 @@
+* {
+ box-sizing: border-box;
+ margin: 0;
+
+}
+
+body{
+  background: rgb(69,12,13);
+  background: linear-gradient(90deg, rgba(69,12,13,1) 34%, rgba(37,8,20,1) 72%);
+  font-family: 'Cinzel', serif;
+}
+ul li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+.harry-p{
+  text-align: left;
+  position: relative;
+  align-self: center;
+}
+
+.header-hp{
+  display: flex;
+  justify-content: center;
+  background-color: rgb(5, 5, 5);
+  height: 80px;
+  
+}
+
+.nav-hp{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.nav-hp ul{
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+ 
+  
+}
+.nav-hp ul li{
+ margin: 10px;
+ color: antiquewhite;
+ transition: all 400ms;
+
+}
+.Gryffindor:hover{
+    color: red;
+}
+.Slytherin:hover{
+  color: green;
+}
+.Hufflepuff:hover{
+  color: yellow;
+}
+.Ravenclaw:hover{
+  color:blue
+}
+.main-box{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.box-characters{
+  
+  display: flex;
+  margin: 20px;
+  transition: all 1000ms;
+  
+}
+
+.box-characters img{
+  width: 300px;
+	height: 300px;
+	object-fit: cover;
+  resize: both;
+  transition: all 1000ms;
+}
+.box-characters h4{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  background-color: rgba(0, 0, 0, 0.841);
+  transition: all 1000ms;
+  display: none;
+}
+
+
+.box-characters:hover h4{
+  display: block;
+  box-shadow: 0px 0px 68px 50px rgba(0,0,0,0.71);
+}
+
+.box-characters:hover img{
+  border-radius: 40px;
+  box-shadow: 33px -9px 15px 0px rgba(0,0,0,0.75);
+ 
+}
+.box-characters:hover{
+  transform: scale(1.3);
+}
+
+.footer-hp{
+  width: 100%;
+  background-color: rgb(5, 5, 5);
+  height: 130px;
+}
+.footer-hp p{
+  color: rgb(135, 135, 135);
+  font-size: 40px;
+  text-align: center;
+
+ 
+}
+
+i{
+  text-decoration: none;
+  color: azure;
+  font-size: 30px;
+  margin: 10px 20px;
+  transition: all 700ms;
+}
+i:hover{
+  color: blanchedalmond;
+  transform: scale(1.5);
+}

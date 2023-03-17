@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/normalize.css">
+    <link rel="stylesheet" href="../stylesheets/house.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4d18b4db01.js" crossorigin="anonymous"></script>
+    
+    <title><%= hp.house %></title>
+</head>
+<body>
+    <header class="header-hp">
+        <nav class="nav-hp">
+            <ul>
+                <a href="/house/Gryffindor"><li class="Gryffindor">Gryffindor</li>
+                <a href="/house/Slytherin"><li class="Slytherin">Slytherin</li></a>
+                <a href="/house/Hufflepuff"><li class="Hufflepuff">Hufflepuff</li></a>
+                <a href="/house/Ravenclaw"><li class="Ravenclaw">Ravenclaw</li></a>
+            </ul>
+        </nav>
+    </header>
+    <a href="/"><i class="fa-solid fa-arrow-left"></i></a>
+    <div class="main-box">
+    
+    <% hp.forEach(personas => { %>
+        
+        <div class="box-characters"> 
+         
+            <a href="/characters/<%= personas.id %>"> 
+                <h4><%= personas.name %></h4>
+                <img src="<%= personas.image %>" width="100px">
+             </a>
+        
+</div>
+    <% }) %>
+    
+<footer class="footer-hp">
+    <p>Created By MarcoSavarino <br>
+        <a href="https://github.com/MarcoSavarin0" class="github"><i class="fa-brands fa-github"></i></a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/normalize.css">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/detalle.css">
+    <link rel="stylesheet" href="../stylesheets/house.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/4d18b4db01.js" crossorigin="anonymous"></script>
+    
+    <title><%= pj.name %></title>
+</head>
+<body>
+    <header class="header-hp">
+        <nav class="nav-hp">
+            <ul>
+                <a href="/house/Gryffindor"><li class="Gryffindor">Gryffindor</li>
+                <a href="/house/Slytherin"><li class="Slytherin">Slytherin</li></a>
+                <a href="/house/Hufflepuff"><li class="Hufflepuff">Hufflepuff</li></a>
+                <a href="/house/Ravenclaw"><li class="Ravenclaw">Ravenclaw</li></a>
+            </ul>
+        </nav>
+    </header>
+    <a href="/"><i class="fa-solid fa-arrow-left"></i></a>
+
+   
+<section class="card-section"> 
+    <div class="card"> 
+    <h3><%= pj.name %></h4>
+    <img src="<%= pj.image %>" width="200px">
+    
+       
+    <% if (pj.alternate_names != '') { %>
+        <p>Se lo conoce como:</p>
+        <ul>
+        <% for( let i = 0; i < pj.alternate_names.length; i++ ) { %>
+            <li>
+              <h4>
+                -<%= pj.alternate_names[i] %>   
+            </h4>
+          </li>  
+          <% } %>
+    <% } %>
+        
+    </ul>  
+    <p> Su casa era <%= pj.house %></p>
+    <% if (pj.dateOfBirth != null) { %>
+        <p>Fecha de nacimiento: <%= pj.dateOfBirth %></p>
+    <% } %>
+    <% if (pj.gender == 'male') { %>
+     <p>Actor: <%= pj.actor %></p>
+    <% } else { %>
+        <p>Actriz: <%=  pj.actor %></p>
+        <% } %>
+    <% if (pj.wand.wood != '' && pj.wand.core && pj.wand.length != null) { %>
+        <h4>Caracteristicas de su varita:</h3>
+        <p><%= pj.wand.wood%></p>
+        <p><%= pj.wand.core %></p>
+        <p><%=pj.wand.length%></p>
+    <% } %>
+    </div>
+</section>
+    <footer class="footer-hp">
+        <p>Created By MarcoSavarino <br>
+        <a href="https://github.com/MarcoSavarin0" class="github"><i class="fa-brands fa-github"></i></a></p>
+    </footer>
+</body>
+</html>
